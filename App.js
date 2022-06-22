@@ -1,11 +1,47 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, FlatList } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <FlatList
+         data={[1,2,3,4]}
+
+         renderItem={(data) => <Text style={styles.text}>{data.item}</Text>}
+      />
+      <ScrollView horizontal={true}>
+        <Image 
+          source={require("./anime.jpg")}
+          style={{ width: 200, height: 200 }}  
+          resizeMode = "contain"
+        />
+        <Image source={{uri: "https://via.placeholder.com/600/92c925"}}
+          style={{ width: 200, height: 200 }}        
+        />
+        <Image 
+          source={require("./anime.jpg")}
+          style={{ width: 200, height: 200 }}  
+          resizeMode = "contain"
+        />
+        <Image source={{uri: "https://via.placeholder.com/600/92c925"}}
+          style={{ width: 200, height: 200 }} />
+        <Image 
+          source={require("./anime.jpg")}
+          style={{ width: 200, height: 200 }}  
+          resizeMode = "contain"
+        />
+        <Image source={{uri: "https://via.placeholder.com/600/92c925"}}
+          style={{ width: 200, height: 200 }} />
+        <Image 
+          source={require("./anime.jpg")}
+          style={{ width: 200, height: 200 }}  
+          resizeMode = "contain"
+        />
+        <Image source={{uri: "https://via.placeholder.com/600/92c925"}}
+          style={{ width: 200, height: 200 }} />
+
+
+      </ScrollView>
     </View>
   );
 }
